@@ -1,3 +1,4 @@
+
 # VAE
 A Pytorch implementation of [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114) on the MNIST dataset.
 
@@ -6,6 +7,7 @@ The paper introduces techniques for performing efficient learning in directed pr
 
 # Results 
 ## Reconstructions
+
 <table align='center'>
 <tr align='center'>
 </tr>
@@ -14,9 +16,10 @@ The paper introduces techniques for performing efficient learning in directed pr
 <td><img src="https://github.com/akshatsh49/VAE/blob/main/reconst_folder/Reconstructions_11.png" width=1000" />
 <td><img src="https://github.com/akshatsh49/VAE/blob/main/reconst_folder/Reconstructions_201.png" width=1000" />
 </tr>
-</tabl
+</table>
 
 ## Samples from gaussian prior
+
 <table align='center'>
 <tr align='center'>
 </tr>
@@ -36,3 +39,20 @@ The paper introduces techniques for performing efficient learning in directed pr
 <td><img src="https://github.com/akshatsh49/VAE/blob/main/loss/Validation_loss.png" width=1000" />
 </tr>
 </table>
+
+## Handpicked Linear Space Interpolation
+
+<table align='center'>
+<tr align='center'>
+</tr>
+<tr>
+<td><img src="https://github.com/akshatsh49/VAE/blob/main/space_interpolations/201%20(1).png" width=1000" />
+<td><img src="https://github.com/akshatsh49/VAE/blob/main/space_interpolations/201%20(2).png" width=1000" />
+</tr>
+</table>
+
+## Model architecture overview
+The encoder net is composed of 2 fully connected layers which parametrize the posterior distribution by returning the mean and log-variance of the recognition model.
+The decoder net is composed of 2 fully connected layers which model the conditional distribution p(x|z). 
+The model class contains an encoder and decoder object and returns the sufficient statistics for computation of the ELBO.
+
